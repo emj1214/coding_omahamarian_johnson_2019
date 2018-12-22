@@ -2,6 +2,8 @@
     <title>FBLA</title>
     <head>
         <link rel="stylesheet" href="assets/dist/slc.css">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="56779971112-v4kl4uijje7k26blkns2fmg1cpr7eav1.apps.googleusercontent.com">
     </head>
     
     <div class="title">
@@ -12,47 +14,18 @@
 
     <body>
         
-        <!--<div class="login_bubble">
+        <div class="login_bubble">
             <div class="tab">
               <a class="tablinks" onclick="openPosition(event, 'Student')" id=defaultOpen>Student</a>
               <a class="tablinks" onclick="openPosition(event, 'Teacher')">Teacher</a>
-              <a class="tablinks" onclick="openPosition(event, 'Admin')">Admin</a>
             </div>
             
             <div id="Student" class="tabcontent">
-                <form method=POST action="/logingin_student">
-                <p>Email:</p>
-                <input type="text" id="email" name="email" class="textbox">
-                <br>
-                <p>Password:</p>
-                <input type="password" name="password" id="password" class="textbox">
-                <br>
-                <input type="submit">
-            </form>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
             </div>
             
             <div id="Teacher" class="tabcontent">
-                <form method=POST action="/logingin_teacher">
-                    <p>Email:</p>
-                    <input type="text" id="email" class="textbox">
-                    <br>
-                    <p>Password:</p>
-                    <input type="password" id="password" class="textbox">
-                    <br>
-                    <input type="submit">
-                </form>
-            </div>
-            
-            <div id="Admin" class="tabcontent">
-                <form method=POST action="/logingin_admin">
-                    <p>Email:</p>
-                    <input type="text" id="email" class="textbox">
-                    <br>
-                    <p>Password:</p>
-                    <input type="password" id="password" class="textbox">
-                    <br>
-                    <input type="submit">
-                </form>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
             </div>
         </div>
         
@@ -80,7 +53,7 @@
             
             document.getElementById("defaultOpen").click();
         </script>
-        -->
+    
     </body>
     
 </html>
