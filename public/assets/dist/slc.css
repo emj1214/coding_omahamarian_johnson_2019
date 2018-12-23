@@ -119,3 +119,44 @@ p {
     border: 1px solid #ccc;
     border-top: none;
 }
+
+html {
+    background: linear-gradient(to bottom right, #1f6fef, lightblue);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.notActive {
+    padding: 14px 16px;
+}
+
+.topnav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: white;
+    border-style: solid;
+    border-width: 2px; 
+    padding: 12px 14px;
+    color: #fff;
+    border-radius: 5px; 
+}
+
+.active {
+    background: rgba(255, 255, 255, 0);
+    border: white;
+    border-style: solid;
+    border-width: 2px; 
+    padding: 12px 14px;
+    color: #fff;
+    border-radius: 5px;
+}

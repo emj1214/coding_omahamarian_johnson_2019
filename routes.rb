@@ -1,7 +1,3 @@
-get "/" do
-    redirect to("/login")
-end
-
 get "/login" do
     erb:"login"
 end
@@ -25,13 +21,10 @@ get '/authenticated' do
   info_service = Google::Apis::Oauth2V2::Oauth2Service.new
   info = info_service.get_userinfo(options: { authorization: user_credentials.access_token })
 
-  if Teacher.find_by(email: info.email) != nul
-      user = Teacher.find_by(email: info.email)
-  else 
-      user = Student.find_by(email: info.email)
-  end
+  user = Teacher.find_by(email: info.email)
+
   session[:current_user_id] = user.id
-  
+  params[:user_id] = user.id
   redirect to('/home/:user_id')
 end
 
@@ -42,24 +35,6 @@ def set_user_session
   session[:issued_at] = user_credentials.issued_at
 end
 
-post "/logingin_student" do
-    student_email = params[:email]
-    @student = Student.find_by email: student_email
-    if params[:password] = @student.password
-        redirect to("/student_home/:student_id")
-    end
-    if params[:password] != @student.password
-        redirect to("/login")
-    end
-    session[:current_user_id] = @student.id
-end
-
-get '/add_user' do
-    erb:"adduser"
-end
-
-get "/home/:user_id" do
-    @student = Student.find(session[:current_user_id])
-    params[:student_id] = session[:current_user_id]
-    erb:"student_home"
+get "/home" do
+    erb:"index"
 end
