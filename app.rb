@@ -42,10 +42,9 @@ set :no_auth_neededs, ['/login', '/authenticate', '/authenticated']
     
       #set up authorization
     unless no_authentication?
-      Google::Apis::ClientOptions.default.application_name = 'SheQL'
+      Google::Apis::ClientOptions.default.application_name = 'coding_omahamarian_johnson_2018'
       Google::Apis::ClientOptions.default.application_version = '1.0.0'
   
-      client_secrets = Google::APICLientSecrets.load rescue Google::APIClient::ClientSecrets.new(JSON.parse(ENV['CLIENT_SECRETS']))
       client_secrets = Google::APIClient::ClientSecrets.load
       authorization = client_secrets.to_authorization
       authorization.scope = 'openid email profile'
