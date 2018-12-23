@@ -1,3 +1,7 @@
+get "/" do
+    redirect to("/login")
+end
+
 get "/login" do
     erb:"login"
 end
