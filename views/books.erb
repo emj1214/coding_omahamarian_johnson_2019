@@ -1,0 +1,150 @@
+<html>
+    <!-- This is the file that displays the information for the page where you can see all of the existing books. Information is pulled from the routes.rb file and used to provide data from the database under each option. By selecting an option, the form sends that information back to routes.rb and it is sent through different functions there.-->
+    <head>
+        <style>
+            html {
+                background: linear-gradient(to bottom right, #1f6fef, lightblue);
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .topnav {
+                overflow: hidden;
+            }
+            
+            .topnav a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            
+            .notActive {
+                padding: 14px 16px;
+            }
+            
+            .topnav a:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px; 
+            }
+            
+            .active {
+                background: rgba(255, 255, 255, 0);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px;
+            }
+            
+            h2 {
+                color: white;
+                text-align: center;
+            }
+            
+            p {
+                color: white;
+                text-align: center;
+            }
+            
+            ul {
+                list-style: none;
+                width: 95%;
+                text-align: center;
+            }
+            
+            li {
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 5px;
+            }
+            
+            .student_drop_down_content {
+                display: none;
+                text-align: center;
+            }
+            
+            li:hover .student_drop_down_content {
+                display: block;
+            }
+            
+            .button {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 17px;
+                padding: 14px 16px;
+            }
+            
+            .button:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="topnav" id="NavBar">
+            <a href="/home" class="notActive">Home</a>
+            <a href="/students" class="notActive">Students</a>
+            <a href="/books" class="active">Books</a>
+            <a href="/assign" class="notActive">Distribute</a>
+            <a href="/weekly_report" class="notActive">Report</a>
+        </div>
+        
+        <h2>
+            Book List
+        </h2>
+        
+        <p>
+           Here is the list of all books assigned in Hypothetical High School!
+        </p>
+        
+        <!-- this creates the list of books -->
+        <ul>
+            <% @books.each do |book| %>
+                <li>
+                    <div class="student_drop_down_title">
+                        <h4><%= book.title %></h4>
+                    </div>
+                    <div class="student_drop_down_content">
+                        <p>
+                            Link to Book: <%= book.book_link %>
+                            <br>
+                            <br>
+                            Students who have been assigned this book:
+                            <br>
+                            <% book.students.each do |student| %>
+                            <%= student.name %>
+                            <br>
+                            <% end %>
+                        </p>
+                    </div>
+                </li>
+                <br>
+            <% end %>
+        </ul>
+        
+        <a class="button" href="/new_book">Add A Book</a>
+        <a class="button" href="/drop_book">Remove A Book</a>
+    </body>
+    
+</html>
+

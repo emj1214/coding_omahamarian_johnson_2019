@@ -1,0 +1,229 @@
+<html>
+    <!-- This is the file that displays the information for the page where you can assign books to students. Information is pulled from the routes.rb file and used to provide data from the database under each option. By selecting an option, the form sends that information back to routes.rb and it is sent through different functions.-->
+    <head>
+        <style>
+            html {
+                background: linear-gradient(to bottom right, #1f6fef, lightblue);
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .topnav {
+                overflow: hidden;
+            }
+            
+            .topnav a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            
+            .notActive {
+                padding: 14px 16px;
+            }
+            
+            .topnav a:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px; 
+            }
+            
+            .active {
+                background: rgba(255, 255, 255, 0);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px;
+            }
+            
+            h2 {
+                color: white;
+                text-align: center;
+            }
+            
+            p {
+                color: white;
+                text-align: center;
+            }
+            
+            label {
+                color: white;
+                font-size: 24px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="topnav" id="NavBar">
+            <a href="/index" class="notActive">Home</a>
+            <a href="/students" class="notActive">Students</a>
+            <a href="/books" class="notActive">Books</a>
+            <a href="/assign" class="notActive">Distribute</a>
+            <a href="/weekly_report" class="notActive">Report</a>
+        </div>
+        
+        <h2>
+            Delete a student here! 
+        </h2>
+        
+        <form method="POST" action="/dropping_student">
+            <label>Student Names</label>
+            <br>
+            <br>
+            <label>Select up to 20 students</label>
+            <br>
+            <select name="student_email1">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value="<%= student.email %>"><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email2">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email3">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email4">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email5">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email6">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email7">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email8">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email9">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email10">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email11">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email12">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email13">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email14">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email15">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email16">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email17">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email18">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email19">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <select name="student_email20">
+                <option value="">-Select Students-</option>
+                <% @student.each do |student| %>
+                <option value=<%= student.email %>><%= student.name %></option>
+                <% end %>
+            </select>
+            <br>
+            <input type="submit">
+        </form>
+        
+    </body>
+    
+</html>

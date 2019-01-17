@@ -10,39 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181112134429) do
+ActiveRecord::Schema.define(version: 20190115230034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookids", force: :cascade do |t|
-    t.string "uniqueid"
-  end
-
-  create_table "books", force: :cascade do |t|
-    t.string "title"
-  end
-
-  create_table "lessons", force: :cascade do |t|
-    t.string "name"
-    t.string "uniqueid"
+    t.bigint "student_id"
+    t.bigint "livre_id"
+    t.integer "code_id"
+    t.datetime "created_at"
+    t.index ["livre_id"], name: "index_bookids_on_livre_id"
+    t.index ["student_id"], name: "index_bookids_on_student_id"
   end
 
   create_table "livres", force: :cascade do |t|
     t.string "title"
+    t.string "book_link"
   end
 
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "password"
     t.integer "grade"
   end
 
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "password"
   end
 
 end

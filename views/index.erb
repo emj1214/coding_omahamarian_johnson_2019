@@ -1,5 +1,5 @@
 <html>
-    
+    <!-- This is the file that displays the information for the home page. Everything between the style tags create the layout for the page. The navigation bar is denoted by the id "NavBar."-->
     <head>
         <style>
             html {
@@ -42,16 +42,77 @@
                 color: #fff;
                 border-radius: 5px;
             }
+            
+            h2 {
+                color: white;
+                text-align: center;
+            }
+            
+            h3 {
+                color: white;
+                text-align: center;
+            }
+            
+            p {
+                color: white;
+                text-align: center;
+            }
+            
+            ul {
+                list-style: none;
+                width: 95%;
+                text-align: center;
+            }
+            
+            li {
+                color: white;
+                text-align: center;
+                text-decoration: none;
+            }
+            
+            .border {
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 5px;
+            }
+            
+            .drop_down_content {
+                display: none;
+                text-align: center;
+            }
+            
+            li:hover .drop_down_content {
+                display: block;
+            }
+            
+            .button {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 17px;
+                padding: 14px 16px;
+            }
+            
+            .button:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px;
+            }
         </style>
     </head>
     
     <body>
         
         <div class="topnav" id="NavBar">
-            <a href="/index" class="active">Home</a>
+            <a href="/home" class="active">Home</a>
             <a href="/students" class="notActive">Students</a>
             <a href="/books" class="notActive">Books</a>
-            <a href="/classes" class="notActive">Classes</a>
             <a href="/assign" class="notActive">Distribute</a>
             <a href="/weekly_report" class="notActive">Report</a>
         </div>
@@ -59,6 +120,120 @@
         <h2>
             Welcome! 
         </h2>
+        
+        <p>
+            Use this website to assign books to students in Hypothetical High School!
+        </p>
+        
+        <br>
+        <br>
+        <h3>
+            Navigation Help Menu
+        </h3>
+        <ul>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Home</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        Home page, help menu, an awesome place to get started
+                    </p>
+                </div>
+            </li>
+            <br>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Students</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        Provides complete list of students in database, allows for students to find access codes and connect to ebook
+                    </p>
+                </div>
+            </li>
+            <br>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Books</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        Provides complete list of books in database, lists students who have been assigned each book 
+                    </p>
+                </div>
+            </li>
+            <br>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Distribute</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        Allows individuals to assign ebooks to students 
+                    </p>
+                </div>
+            </li>
+            <br>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Report</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        Where weekly report is stored, updates after any changes made to database
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <br>
+            <br>
+            <p>Frequntly Asked Questions</p>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Q: Where can I add a student to the database?</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        A: Go to the Student tab and scroll to the bottom of the page. You'll find a button there that will take you to the form for adding a student
+                    </p>
+                </div>
+            </li>
+            <br>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Q: Where can I add a book to the database?</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        A: Go to the Book tab and scroll to the bottom of the page. You'll find a button there that will take you to the form for adding a book
+                    </p>
+                </div>
+            </li>
+            <br>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Q: Can I remove students and/or books from the database?</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        A: Yes! For a student, go to the student tab and scroll to the bottom. There is a link there that will take you to a form where you can remove students from the database as needed. For a book, go to the books tab and scroll to the bottom. There is a link there that will take you to a form where you can remove books from the database as needed. 
+                    </p>
+                </div>
+            </li>
+            <br>
+            <li class="border">
+                <div id="title" class="student_drop_down_title">
+                    <h4>Q: Does Emma Johnson deserve 1st place in the Coding and Programming category at the Nebraska FBLA State Leadership Conference?</h4>
+                </div>
+                <div class="drop_down_content"> 
+                    <p>
+                        A: Absolutely! 
+                    </p>
+                </div>
+            </li>
+        </ul>
     </body>
     
 </html>

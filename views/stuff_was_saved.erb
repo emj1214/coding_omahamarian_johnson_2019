@@ -1,0 +1,100 @@
+<html>
+    <!-- This is the file that lets the user know their data was saved-->
+    <head>
+        <style>
+            html {
+                background: linear-gradient(to bottom right, #1f6fef, lightblue);
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .topnav {
+                overflow: hidden;
+            }
+            
+            .topnav a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            
+            .notActive {
+                padding: 14px 16px;
+            }
+            
+            .topnav a:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px; 
+            }
+            
+            .active {
+                background: rgba(255, 255, 255, 0);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px;
+            }
+            
+            h2 {
+                color: white;
+                text-align: center;
+            }
+            
+            p {
+                color: white;
+                text-align: center;
+            }
+            
+            .button {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 17px;
+                padding: 14px 16px;
+            }
+            
+            .button:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border: white;
+                border-style: solid;
+                border-width: 2px; 
+                padding: 12px 14px;
+                color: #fff;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="topnav" id="NavBar">
+            <a href="/home" class="active">Home</a>
+            <a href="/students" class="notActive">Students</a>
+            <a href="/books" class="notActive">Books</a>
+            <a href="/assign" class="notActive">Distribute</a>
+            <a href="/weekly_report" class="notActive">Report</a>
+        </div>
+        
+        <h2>
+            Requests were accepted! Changes were made. Thank you!
+        </h2>
+        
+        <a class="button" href="/new_student">Add Another Student</a>
+        <a class="button" href="/new_book">Add Another Book</a>
+        <a class="button" href="/assign">Distribute More Books</a>
+        <a class="button" href="/drop_student">Remove Another Student</a>
+        <a class="button" href="/drop_book">Remove Another Book</a>
+
+    </body>
+    
+</html>

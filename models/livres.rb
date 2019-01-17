@@ -1,6 +1,5 @@
-class Book < ActiveRecord::Base
-    belongs_to :lessons
+class Livre < ActiveRecord::Base
     has_many :bookids
-    belongs_to :students, -> {:bookids}
+    has_many :students, through: :bookids
     validates :title, presence: true
 end

@@ -1,3 +1,5 @@
+# each gem is a packet of cade that can be called when the program is run. Below is the list of gems I have required for this website through Ruby on Rails.
+
 # require gems
 require 'sinatra'
 require 'sinatra/activerecord'

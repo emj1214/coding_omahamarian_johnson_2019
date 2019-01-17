@@ -1,3 +1,6 @@
+# This is the file that sets up the use of Active Record. By typing rake into the terminal, the code below is run and will give you a list of command prompts. "rake serve" will run the program.
+
+
 require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 require './app'
