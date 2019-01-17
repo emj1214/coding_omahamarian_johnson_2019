@@ -22,5 +22,9 @@ To run the file from the Cloud9 terminal, simply add the following commands:
     sudo service postgresql start
     bundle install
     rake serve
+    
+To access the Cloud9 editor, follow this link:
+
+    https://ide.c9.io/emj1214/coding_omahamarian_johnson_2018
 
 Thank you so much again for looking at my project! 
