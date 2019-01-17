@@ -12,13 +12,14 @@ Under the folder SLCebooks >> db >> migrate, all of the migration files are reco
 Under the folder SLCebooks >> models, there are files that describe the relationships between columns in the database. Books (titled Livres, the french word for books, as the word "book" has been reserved by Rails for a particular function) and Students are connected through Bookids. These Bookids each have a unique id that becomes the access code for students to click on to gain access to the book_link, or the provided URL for the ebook.
 
 The views folder (SLCebooks >> views) contains the most important files for this project. These files are what creates the pages for the website. 
-Inside the main file folder SLCebooks, you can find routes.rb (the file that tells the website where to go when a specific link is called). In this file, certain variables are called with "@" infront of them. This makes them available in other files, which allows for these files to access the database outside of their own page. The routes.rb file is one of the major connecting pieces between the database informtation and the pages that present this information.
+Inside the main file folder SLCebooks, you can find routes.rb (the file that tells the website where to go when a specific link is called). In this file, certain variables are called with "@" in front of them. This makes them available in other files, which allows for these files to access the database outside of their own page. The routes.rb file is one of the major connecting pieces between the database information and the pages that present this information.
 Other files in the Views folder are called in routes.rb, and are then presented to the user. Each file is named closely to what it does, so that finding things throughout the code becomes much less difficult.
 
 Under the SLCebooks folder (along with the routes.rb file), one can find the app.rb file (which requires specific gems and routesfor the site as a whole), the Gemfile and Gemfile.lock (which document all of the gems downloaded into the project), and the Rakefile (which tells the terminal what commands to accept and decline, and what actions the user can have it perform).
 
 To run the file from the Cloud9 terminal, simply add the following commands:
 
+    cd SLCebooks
     sudo service postgresql start
     bundle install
     rake serve
