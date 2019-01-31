@@ -71,26 +71,27 @@
                 border-radius: 5px;
             }
             
-            .button {
-                float: left;
-                display: block;
-                color: white;
-                text-align: center;
-                text-decoration: none;
-                font-size: 17px;
-                padding: 14px 16px;
+            .helpNav {
+                display: flex;
+                justify-content: center;
             }
             
-            .button:hover {
+            .helpNav a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            
+            .helpNav a:hover {
                 background: rgba(255, 255, 255, 0.2);
                 border: white;
                 border-style: solid;
                 border-width: 2px; 
                 padding: 12px 14px;
                 color: #fff;
-                border-radius: 5px;
+                border-radius: 5px; 
             }
-            
         </style>
     </head>
     
@@ -102,7 +103,11 @@
             <a href="/books" class="notActive">Books</a>
             <a href="/assign" class="notActive">Distribute</a>
             <a href="/weekly_report" class="active">Report</a>
+            <a href="/FAQ" class="notActive">FAQ</a>
         </div>
+        
+        <br>
+        <br>
         
         <h2>
             Weekly Report
@@ -114,10 +119,12 @@
         <br>
         <br>
         
-        <a class="button" href="/students_only">Student Names Only</a>
-        <a class="button" href="/books_only">Book Titles Only</a>
-        <a class="button" href="/dates_only">Dates Assigned Only</a>
-        <a class="button" href="/table">Complete Table View</a>
+        <div class="helpNav">
+            <a href="/students_only" class="notActive">Student Names Only</a>
+            <a href="/books_only" class="notActive">Book Titles Only</a>
+            <a href="/dates_only"class="notActive">Dates Assigned Only</a>
+            <a href="/table" class="notActive">Complete Table View</a>
+        </div>
 
         <br>
         <br>

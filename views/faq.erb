@@ -46,7 +46,7 @@
             h1 {
                 color: white;
                 text-align: center;
-                font-size: 36px;
+                font-size: 24px;
             }
             
             h3 {
@@ -128,19 +128,20 @@
                 border-color: white;
             }
             
-            .helpNav {
+            .FAQNav {
                 display: flex;
                 justify-content: center;
             }
             
-            .helpNav a {
+            .FAQNav a {
                 display: block;
                 color: white;
+                text-align: center;
                 text-decoration: none;
                 font-size: 17px;
             }
             
-            .helpNav a:hover {
+            .FAQNav a:hover {
                 background: rgba(255, 255, 255, 0.2);
                 border: white;
                 border-style: solid;
@@ -148,6 +149,11 @@
                 padding: 12px 14px;
                 color: #fff;
                 border-radius: 5px; 
+            }
+            
+            hr {
+                width: 95%;
+                border-color: white;
             }
         </style>
     </head>
@@ -165,62 +171,49 @@
         
         <br>
         <br>
-        <br>
         
         <h1>
-            Welcome! 
+            Frequently Asked Questions
         </h1>
-        
-        <p>
-            Use this website to assign books to students in Hypothetical High School!
-        </p>
-        
-        <br>
-        <br>
-        <hr noshade size="2px">
-        
+            
             <div class="outside">
-                <h3>
-                    Navigation Help Menu
-                </h3>
-                <div class="helpNav" >
-                    <a id="defaultOpen" onclick="openPage('Home', this)" class="notActive">Home</a>
-                    <a onclick="openPage('Students', this)" class="notActive">Students</a>
-                    <a onclick="openPage('Books', this)" class="notActive">Books</a>
-                    <a onclick="openPage('Distribute', this)" class="notActive">Distribute</a>
-                    <a onclick="openPage('Report', this)" class="notActive">Report</a>
-                    <a onclick="openPage('FAQ', this)" class="notActive">FAQ</a>
+                <div class="FAQNav">
+                    <a id="defaultOpen" onclick="openPage('Add Student', this)" class="notActive">Q: Where can I add a student to the database?</a>
+                    <a onclick="openPage('Add Book', this)" class="notActive">Q: Where can I add a book to the database?</a>
+                    <a onclick="openPage('Remove', this)" class="notActive">Q: Can I remove students and/or books from the database?</a>
+                    <a onclick="openPage('first', this)" class="notActive">Q: Does Emma Johnson deserve 1st place in the Coding and Programming category at the Nebraska FBLA State Leadership Conference?</a>
                 </div>
         
-                
-                <div id="Home" class="tabcontent">
-                  <h3>Home</h3>
-                  <p>Home page, help menu, an awesome place to get started</p>
+                <div id="Add Student" class="tabcontent">
+                  <br>
+                  <br>
+                  <h3>Q: Where can I add a student to the database?</h3>
+                  <br>
+                  <p>A: Go to the Student tab and scroll to the bottom of the page. You'll find a button there that will take you to the form for adding a student</p>
                 </div>
                 
-                <div id="Students" class="tabcontent">
-                  <h3>Students</h3>
-                  <p>Provides complete list of students in database, allows for students to find access codes and connect to ebook</p>
+                <div id="Add Book" class="tabcontent">
+                  <br>
+                  <br>
+                  <h3>Q: Where can I add a book to the database?</h3>
+                  <br>
+                  <p>A: Go to the Book tab and scroll to the bottom of the page. You'll find a button there that will take you to the form for adding a book</p>
                 </div>
                 
-                <div id="Books" class="tabcontent">
-                  <h3>Books</h3>
-                  <p>Provides complete list of books in database, lists students who have been assigned each book</p>
+                <div id="Remove" class="tabcontent">
+                  <br>
+                  <br>
+                  <h3>Q: Can I remove students and/or books from the database?</h3>
+                  <br>
+                  <p>A: Yes! For a student, go to the student tab and scroll to the bottom. There is a link there that will take you to a form where you can remove students from the database as needed. <br>For a book, go to the books tab and scroll to the bottom. There is a link there that will take you to a form where you can remove books from the database as needed. </p>
                 </div>
                 
-                <div id="Distribute" class="tabcontent">
-                  <h3>Distribute</h3>
-                  <p>Allows individuals to assign ebooks to students</p>
-                </div>
-                
-                <div id="Report" class="tabcontent">
-                  <h3>Report</h3>
-                  <p>Where weekly report is stored, updates after any changes made to database</p>
-                </div>
-                
-                <div id="FAQ" class="tabcontent">
-                   <h3>FAQ</h3>
-                   <p>Where the most commonly asked questions and their answers can be found</p>
+                <div id="first" class="tabcontent">
+                  <br>
+                  <br>
+                  <h3>Q: Does Emma Johnson deserve 1st place in the Coding and Programming category at the Nebraska FBLA State Leadership Conference?</h3>
+                  <br>
+                  <p>A: Absolutely! </p>
                 </div>
             </div>
             
@@ -242,7 +235,6 @@
                 // Get the element with id="defaultOpen" and click on it
                 document.getElementById("defaultOpen").click();
             </script>
-        
     </body>
     
 </html>

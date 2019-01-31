@@ -52,6 +52,35 @@
                 color: white;
                 text-align: center;
             }
+            
+            label {
+                color: white;
+            }
+            
+            form {
+                display: block;
+                text-align: center;
+            }
+            input {
+                background: lightblue;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+                height: 29px;
+                padding: 5px; /* If you add too much padding here, the options won't show in IE */
+                width: 268px;
+            }
+            
+            .styled-select {
+                background: lightblue;
+                color: black;
+                border: none;
+                font-size: 14px;
+                height: 29px;
+                padding: 5px; /* If you add too much padding here, the options won't show in IE */
+                width: 268px;
+            }
         </style>
     </head>
     
@@ -63,6 +92,7 @@
             <a href="/books" class="notActive">Books</a>
             <a href="/assign" class="notActive">Distribute</a>
             <a href="/weekly_report" class="notActive">Report</a>
+            <a href="/FAQ" class="notActive">FAQ</a>
         </div>
         
         <h2>
@@ -82,7 +112,7 @@
             <br>
             <label>Grade *</label>
             <br>
-            <select name="grade">
+            <select name="grade" class="styled-select">
                 <option value=9>9</option>
                 <option value=10>10</option>
                 <option value=11>11</option>

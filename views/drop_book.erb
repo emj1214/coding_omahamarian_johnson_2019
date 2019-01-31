@@ -55,9 +55,33 @@
             
             label {
                 color: white;
-                font-size: 24px;
             }
             
+            form {
+                display: block;
+                text-align: center;
+            }
+            
+            .styled-select {
+                background: lightblue;
+                color: black;
+                border: none;
+                font-size: 14px;
+                height: 29px;
+                padding: 5px; /* If you add too much padding here, the options won't show in IE */
+                width: 268px;
+            }
+            
+            input {
+                background: lightblue;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+                height: 29px;
+                padding: 5px; /* If you add too much padding here, the options won't show in IE */
+                width: 268px;
+            }
         </style>
     </head>
     
@@ -69,159 +93,183 @@
             <a href="/books" class="notActive">Books</a>
             <a href="/assign" class="notActive">Distribute</a>
             <a href="/weekly_report" class="notActive">Report</a>
+            <a href="/FAQ" class="notActive">FAQ</a>
         </div>
+        
+        <br>
+        <br>
         
         <h2>
             Delete a book here! 
         </h2>
         
         <form method="POST" action="/dropping_book">
-            <label>Book Titles</label>
+            <label>Select up to 20 book titles</label>
             <br>
             <br>
-            <label>Select up to 20 books</label>
-            <br>
-            <select name="book1">
+            <select name="book1" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book2">
+            <br>
+            <select name="book2" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book3">
+            <br>
+            <select name="book3" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book4">
+            <br>
+            <select name="book4" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book5">
+            <br>
+            <select name="book5" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book6">
+            <br>
+            <select name="book6" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book7">
+            <br>
+            <select name="book7" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book8">
+            <br>
+            <select name="book8" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book9">
+            <br>
+            <select name="book9" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book10">
+            <br>
+            <select name="book10" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book11">
+            <br>
+            <select name="book11" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book12">
+            <br>
+            <select name="book12" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book13">
+            <br>
+            <select name="book13" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book14">
+            <br>
+            <select name="book14" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book15">
+            <br>
+            <select name="book15" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book16">
+            <br>
+            <select name="book16" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book17">
+            <br>
+            <select name="book17" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book18">
+            <br>
+            <select name="book18" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book19">
+            <br>
+            <select name="book19" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
             <br>
-            <select name="book20">
+            <br>
+            <select name="book20" class="styled-select">
                 <option value="">-Select Books-</option>
                 <% @book.each do |book| %>
                 <option value=<%= book.id %>><%= book.title %></option>
                 <% end %>
             </select>
+            <br>
             <br>
             <input type="submit">
+            <br>
+            <br>
         </form>
         
     </body>

@@ -682,3 +682,7 @@ end
 get "/table" do
   erb:"table"
 end
+
+get "/FAQ" do
+  erb:"faq"
+end
