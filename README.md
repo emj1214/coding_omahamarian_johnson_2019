@@ -20,8 +20,8 @@ Under the SLCebooks folder (along with the routes.rb file), one can find the app
 To run the file from the Cloud9 terminal, simply add the following commands:
 
     cd SLCebooks
-    sudo service postgresql start
     bundle install
+    sudo service postgresql start
     rake serve
     
 To access the Cloud9 editor, follow this link:
