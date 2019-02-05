@@ -17,7 +17,7 @@ Other files in the Views folder are called in routes.rb, and are then presented 
 
 Under the SLCebooks folder (along with the routes.rb file), one can find the app.rb file (which requires specific gems and routesfor the site as a whole), the Gemfile and Gemfile.lock (which document all of the gems downloaded into the project), and the Rakefile (which tells the terminal what commands to accept and decline, and what actions the user can have it perform).
 
-To run the file from the Cloud9 terminal, simply add the following commands:
+To run the file from the Cloud9 terminal, simply copy/paste the following commands:
 
     cd SLCebooks
     bundle install
